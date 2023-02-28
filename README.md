@@ -1,13 +1,7 @@
 # E-Commerce
 
-	Eticaret veritabanı tasarlayalım
-o	Bir e ticaret sitesine ait veritabını aşağıdaki durumlar için tasarlayalım
-o	Kategoriler vardır , adı , ürün sayısı , şirket sayısı gibi bilgilere sahiptir
-o	Şirketler vardır. şirktlerin adı ve ait olduğu kategori vardır. Bir şirket birde nfazla kategoriden ürün satabilir
-o	Ürünler mevcuttur, ürünün kategoriler,şirketleri ,adı , kodu , fiyatı varıdr
-o	Siparişler mevcuttur. Şiparişin kodu,adresi ,tahmini teslimat tarihi, teslim edilen kişinin adı sıyadı vardır. Bir sipraişte birçok ürün bulunabilir.
-o	Fatura vardır. Faturanın birçok ürünü ve bir sipraişi olabilir. Her siprai şiçin bir fatura kesilir.
+Let's design the database of an e-commerce site for the following situations. There are categories, it has information such as name, number of products, number of companies. There are companies. There is the name of the companies and the category they belong to. A company can sell products from more than one category. Products are available, the product has categories, companies, name, code, price. Orders are available. The order has code, address, estimated delivery date, name and surname of the person delivered. Many products can be found in one order. There is an invoice. An invoice can have many items and one order. An invoice is issued for each order.
 
-Yukarıdaki e ticaret veritabanı tasarım probleminin draw.io çizimi aşağıdaki gibidir:
+The draw.io drawing of the above e-commerce database design problem is as follows:
 
 ![image](https://user-images.githubusercontent.com/119699844/220654022-07fa70dc-c6b9-4a12-9d55-ed2ef19ec472.png)
