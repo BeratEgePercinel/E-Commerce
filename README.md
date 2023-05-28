@@ -5,3 +5,19 @@ Let's design the database of an e-commerce site for the following situations. Th
 The draw.io drawing of the above e-commerce database design problem is as follows:
 
 ![image](https://user-images.githubusercontent.com/119699844/220654022-07fa70dc-c6b9-4a12-9d55-ed2ef19ec472.png)
+
+create table Category( Id int primary key IDENTITY (1,1), CategoryName varchar(100) ); drop table Category insert into Category (CategoryName) values ('Food')
+
+create table Company( Id int primary key IDENTITY (1,1), CompanyName varchar(100) );
+
+create table Bill( Id int primary key IDENTITY (1,1), Code int );
+
+create table CompanyProduct( Id int primary key IDENTITY (1,1), Price float, CompanyId int, FOREIGN KEY (CompanyId) REFERENCES Company(Id) );
+
+ create table Product( Id int primary key IDENTITY (1,1), ProductName varchar (100), CategoryId int, CompanyProductId int, FOREIGN KEY (CategoryId) REFERENCES Category(Id), FOREIGN KEY (CompanyProductId) REFERENCES CompanyProduct(Id) ); 
+
+create table Orders( Id int primary key IDENTITY (1,1), Code int, Address varchar (150), DeliveryTime time, CustomerName varchar (100), CustomerSurname varchar (100), BillId int, FOREIGN KEY (BillId) REFERENCES Bill(Id) );
+
+
+
+create table ProductOrder( Id int primary key IDENTITY (1,1), OrdersId int, ProductId int, FOREIGN KEY (OrdersId) REFERENCES Orders(Id), FOREIGN KEY (ProductId) REFERENCES Product(Id) );
